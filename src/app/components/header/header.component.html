@@ -1,0 +1,25 @@
+<div class="header">
+  <mat-toolbar class="header_nav">
+    <!-- <button mat-icon-button aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>My App</span>
+  <span class="spacer"></span> -->
+    <button mat-button class="bg-red-600">HOME</button>
+    <button mat-button>CATEGORY</button>
+
+    <button mat-button>LATEST NEWS</button>
+    <button mat-button>PAGES</button>
+    <button mat-button>CONTACT</button>
+    <div class="header_social-networks">
+      <fa-icon [icon]="faFacebookF"></fa-icon>
+      <fa-icon [icon]="faTwitter"></fa-icon>
+      <fa-icon [icon]="faInstagram"></fa-icon>
+      <fa-icon [icon]="faYoutube"></fa-icon>
+    </div>
+    <div mat-button (click)="toggleSearch()" class="px-4 search-button">
+      <mat-icon>search</mat-icon>
+    </div>
+    <div class="header_search"></div>
+  </mat-toolbar>
+</div>
