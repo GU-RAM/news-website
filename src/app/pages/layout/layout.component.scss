@@ -1,0 +1,85 @@
+/* header.component.scss */
+
+.header {
+  background-color: red;
+  display: flex;
+  justify-content: center;
+
+  &_nav {
+    max-width: 1300px;
+    background-color: red;
+    color: #fff;
+    padding: 40px;
+    border-right: 1px solid #fff;
+
+    button {
+      color: #fff;
+      padding: 25px;
+      margin-right: 1px;
+      position: relative;
+      background-color: transparent;
+
+      &::after {
+        content: "";
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 2px;
+        height: 1rem;
+        background-color: #fff;
+      }
+
+      &:last-child::after {
+        display: none; // No separator for the last button
+      }
+
+      &:not(.header_search-button) {
+        // Styles for all buttons except the search button
+        background-color: red; // Set the default background color for other buttons
+      }
+    }
+
+    .spacer {
+      flex: 1 1 auto;
+    }
+  }
+
+  &_social-networks {
+    margin-left: auto;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    cursor: pointer;
+    border-right: 1px solid #fff;
+    border-left: 1px solid #fff;
+    padding: 4%;
+
+    fa-icon {
+      transition: transform 0.9s ease-in-out;
+      display: inline-block; /* Ensure the icon is treated as an inline-block element */
+    }
+
+    fa-icon:hover {
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% {
+        transform: rotateY(0deg);
+      }
+      100% {
+        transform: rotateY(360deg);
+      }
+    }
+  }
+
+  .search-button {
+    margin-left: 35px;
+    cursor: pointer;
+    mat-icon {
+      font-size: 1.8rem;
+    }
+  }
+}
