@@ -4,46 +4,44 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    // redirectTo: '',
     loadComponent: () =>
       import('./pages/layout/layout.component').then((c) => c.LayoutComponent),
     children: [
       {
         path: 'about',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./pages/about/about.component').then((m) => m.AboutComponent),
-        title: 'about',
+        title: 'About',
       },
       {
         path: 'contact',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./pages/contact/contact.component').then(
             (m) => m.ContactComponent
           ),
-        title: 'contact',
+        title: 'Contact',
       },
       {
         path: 'category',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./pages/category/category.component').then(
             (m) => m.CategoryComponent
           ),
-        title: 'category',
+        title: 'Category',
       },
       {
         path: 'latest-news',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./pages/latest-news/latest-news.component').then(
             (m) => m.LatestNewsComponent
           ),
-        title: 'latest news',
+        title: 'Latest News',
       },
       {
         path: 'pages',
-        loadChildren: () =>
+        loadComponent: () =>
           import('./pages/pages/pages.component').then((m) => m.PagesComponent),
-        title: 'pages',
+        title: 'Pages',
       },
     ],
   },

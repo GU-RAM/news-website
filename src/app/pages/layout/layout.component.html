@@ -5,8 +5,8 @@
   </button>
   <span>My App</span>
   <span class="spacer"></span> -->
-    <a mat-button [routerLink]="['/']">HOME</a>
-    <a mat-button [routerLink]="['/category']">CATEGORY</a>
+    <button mat-button [routerLink]="['']">HOME</button>
+    <button mat-button [routerLink]="['/category']">CATEGORY</button>
     <button mat-button [routerLink]="['/latest-news']">LATEST NEWS</button>
     <button mat-button [routerLink]="['/pages']">PAGES</button>
     <button mat-button [routerLink]="['/contact']">CONTACT</button>
@@ -22,3 +22,4 @@
     <div class="header_search"></div>
   </mat-toolbar>
 </div>
+<router-outlet></router-outlet>
